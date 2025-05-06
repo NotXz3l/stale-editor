@@ -2464,10 +2464,9 @@ function loadTabs() {
             return newTabButton;
         }
 
-        function addTab(title, content = '', id = null) {
-    const defaultText = "--[[\n    Made by Salad\n    discord.gg/getsalad\n ]]";    
+        function addTab(title, content = '', id = null) {  
     if (!content) {
-        content = defaultText;
+
     }
     
     const tab = new Tab(title, content);
@@ -2528,7 +2527,6 @@ function switchTab(tabId) {
             }
         }
         
-        const contentToSet = tab.content.trim() === '' ? "--[[ Made by Salad\n    discord.gg/getsalad\n ]]" : tab.content;        editor.setValue(contentToSet);
         tab.element.classList.add('active');
         currentTab = tabId;
     }
